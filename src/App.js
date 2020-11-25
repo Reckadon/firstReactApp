@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import CountersHolder from "./components/countersHolder";
+import NavBar from "./components/navbar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  state = {
+    numberOfNonZeroCounters: 0,
+  };
+
+  handleChangeCounter = (number) => {
+    this.setState({ numberOfNonZeroCounters: number });
+  };
+  countCounters = (counters, id) => {
+    let number = 0;
+    counters = counters.filter((c) => c.id !== id);
+    counters.forEach((element) => {
+      if (element.value > 0) number++;
+    });
+    this.setState({ numberOfNonZeroCounters: number });
+  };
+
+  render() {
+    return (
+      <div>
+        <NavBar number={this.state.numberOfNonZeroCounters} />
+        <CountersHolder
+          onNumberChange={this.handleChangeCounter}
+          countCounters={this.countCounters}
+        />
+      </div>
+    );
+  }
 }
 
 export default App;

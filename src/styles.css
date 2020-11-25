@@ -1,0 +1,120 @@
+.NavBar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgb(53, 53, 53);
+  color: azure;
+  font-weight: 700;
+  font-size: large;
+  padding: 15px;
+  padding-left: 40px;
+}
+.badge {
+  width: 20px;
+  text-align: center;
+  padding-right: 7px;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+  padding-top: 60px;
+  padding-bottom: 200px;
+}
+.btnReset {
+  color: azure;
+  background-color: rgb(0, 110, 255);
+  font-size: larger;
+  font-weight: 500;
+  padding: 10px;
+  border: 2px solid rgb(0, 110, 255);
+  border-radius: 10px;
+  margin: 10px 25px 0px 25px;
+}
+.btnReset:hover {
+  background-color: rgb(24, 124, 255);
+  border: 2px solid rgb(24, 124, 255);
+}
+.btnAddCounter {
+  float: right;
+}
+
+.counter {
+  text-align: center;
+  background-color: rgb(153, 252, 255);
+  padding: 10px;
+  margin: 10px 20px 0px 20px;
+  border: 2px solid rgb(0, 71, 42);
+  border-radius: 10px;
+}
+
+span {
+  display: inline-block;
+  width: 100px;
+  font-weight: 500;
+  padding: 5px;
+  padding-bottom: 7px;
+  padding-left: 7px;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+}
+.number {
+  float: left;
+  padding: 5px 0px;
+  margin: 0px;
+}
+.zero {
+  background-color: yellow;
+}
+.other {
+  background-color: rgb(15, 104, 238);
+  color: azure;
+}
+
+.btnAdd {
+  background-color: rgb(255, 208, 146);
+  font-size: larger;
+  padding: 2px;
+  width: 30px;
+  color: black;
+  margin: 2px 5px;
+  border: 2px solid tomato;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+  box-shadow: 0 3px rgb(112, 112, 112);
+}
+
+.btnAdd:hover {
+  background-color: tomato;
+  color: azure;
+}
+.btnAdd:active {
+  box-shadow: 0 0px rgb(112, 112, 112);
+  transform: translateY(3px);
+}
+
+.btnDelete {
+  float: right;
+  background-color: crimson;
+  font-weight: 600;
+  color: azure;
+  padding: 5px;
+  border: 2px solid crimson;
+  border-radius: 8px;
+  margin-top: 3px;
+  margin-left: 35px;
+  transition-duration: 0.2s;
+}
+.btnDelete:hover {
+  background-color: rgb(231, 71, 71);
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  font-weight: 500;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(95, 158, 160, 0.877);
+  color: azure;
+}
