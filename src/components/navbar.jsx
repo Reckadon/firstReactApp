@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 class NavBar extends Component {
+  handleTarget = (event) => {
+    console.log("value", event.target.value);
+  };
   render() {
     return (
       <nav className="NavBar">
@@ -8,7 +11,7 @@ class NavBar extends Component {
           id="target"
           type="number"
           defaultValue={this.props.target}
-          onChange={() => {
+          onChange={(event) => {
             this.props.onTargetChange(event.target.value);
           }}
           min="0"
