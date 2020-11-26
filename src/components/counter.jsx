@@ -3,15 +3,14 @@ import React, { Component } from "react";
 class Counter extends Component {
   render() {
     const { counter, onAdd, onMinus, onDelete } = this.props;
-
     return (
       <div className="counter">
-        <span className="number">Counter #{counter.id}</span>
+        <span className="number">Team #{counter.id}</span>
         <button className="btnAdd" onClick={() => onAdd(counter)}>
           +
         </button>
-        <span className={this.getClass()}>Count: {this.formatCount()} </span>
-        <button className="btnAdd" onClick={() => onMinus(counter)}>
+        <span className={this.getClass()}>Points: {this.formatCount()} </span>
+        <button className="btnAdd minus" onClick={() => onMinus(counter)}>
           -
         </button>
         <button className="btnDelete" onClick={() => onDelete(counter.id)}>
