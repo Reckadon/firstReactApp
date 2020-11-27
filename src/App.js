@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import "./App.css";
 import CountersHolder from "./components/countersHolder";
 import NavBar from "./components/navbar";
 
@@ -40,7 +39,7 @@ class App extends Component {
 
   render() {
     return (
-      <div>
+      <React.Fragment>
         <NavBar
           number={this.state.numberOfNonZeroCounters}
           target={this.state.target}
@@ -52,7 +51,7 @@ class App extends Component {
           countCountersS={this.countCountersS}
           target={this.state.target}
         />
-      </div>
+      </React.Fragment>
     );
   }
 }

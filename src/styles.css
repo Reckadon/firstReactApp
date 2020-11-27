@@ -149,6 +149,9 @@ footer {
 }
 
 @media only screen and (max-width: 400px) {
+  * {
+    padding: 0px;
+  }
   body {
     padding-top: 90px;
   }
@@ -163,29 +166,15 @@ footer {
   .counter {
     text-align: start;
     padding: 15px;
-  }
-  span {
-    margin-left: 20px;
+    padding-bottom: 45px;
   }
   .number {
     width: fit-content;
-    padding: 5px 15px;
-    padding-top: 25px;
-    vertical-align: middle;
-    margin-right: 3px;
-  }
-  .zero,
-  .other {
-    margin-left: 5px;
-  }
-  .btnAdd {
-    margin-left: 30px;
-  }
-  .minus {
-    margin-left: 30px;
+    padding-top: 20px;
+    padding-right: 11px;
   }
   .btnDelete {
-    margin-left: 10px;
     margin-top: 10px;
+    margin-left: 0px;
   }
 }
