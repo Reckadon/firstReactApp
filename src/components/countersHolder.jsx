@@ -18,7 +18,7 @@ class CountersHolder extends Component {
       (counter) => counter.id !== counterId
     );
     this.setState({ counters: counters });
-    this.props.countCounters(this.state.counters, counterId);
+    this.props.countCountersS(this.state.counters, counterId);
   };
 
   handleAdd = (counter) => {
@@ -26,7 +26,7 @@ class CountersHolder extends Component {
     counters.find((c) => c.id === counter.id).value =
       counters.find((c) => c.id === counter.id).value + 1;
     this.setState({ counters: counters });
-    this.countCounters();
+    this.props.countCounters(this.state.counters);
   };
   handleMinus = (counter) => {
     const counters = this.state.counters;
@@ -34,7 +34,7 @@ class CountersHolder extends Component {
     counters.find((c) => c.id === counter.id).value =
       value === 0 ? 0 : value - 1;
     this.setState({ counters: counters });
-    this.countCounters();
+    this.props.countCounters(this.state.counters);
   };
   handleReset = () => {
     const counters = this.state.counters;
@@ -51,16 +51,6 @@ class CountersHolder extends Component {
       counters: counters,
       countersNumber: this.state.countersNumber + 1,
     });
-  };
-  countCounters = () => {
-    let number = 0;
-    this.state.counters.forEach((counter) => {
-      if (counter.value >= 1) {
-        number++;
-      }
-    });
-    console.log(number);
-    this.props.onNumberChange(number);
   };
 
   render() {
@@ -82,7 +72,7 @@ class CountersHolder extends Component {
           className="btnReset btnAddCounter"
           onClick={this.handleAddCounter}
         >
-          Add Counter
+          Add Team
         </button>
       </div>
     );
